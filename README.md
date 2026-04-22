@@ -63,3 +63,103 @@ RESPONSE
 * Auto-scaling (HPA)
 * Helm charts
 
+## 🔐 Challenges & Fixes
+
+### 1️⃣ EKS Authentication Issue
+
+**Problem:**
+While Performing GitHub Actions with `kubectl` Error:
+
+```
+the server has asked for the client to provide credentials
+```
+
+**Fix:**
+Configured `aws-auth` ConfigMap to map IAM user with Kubernetes RBAC:
+
+* Added GitHub Actions IAM user to `system:masters` group
+* Enabled CI/CD pipeline to access EKS cluster
+
+---
+
+### 2️⃣ Node Group Creation Failure
+
+**Problem:**
+EKS node group creation failed with CloudFormation timeout.
+
+**Fix:**
+
+* Checked CloudFormation logs
+* Fixed IAM role permissions
+* Recreated node group successfully
+
+---
+
+### 3️⃣ Frontend → Backend Connectivity Issue
+
+**Problem:**
+Frontend showed "Something went wrong" on form submission.
+
+**Fix:**
+
+* Exposed backend using LoadBalancer service
+* Updated frontend API URL with external IP
+* Verified API response using Postman
+
+---
+
+### 4️⃣ Docker Image Push Error
+
+**Problem:**
+
+```
+tag does not exist
+```
+
+**Fix:**
+
+* Rebuilt Docker image with correct tag
+* Ensured consistent naming between build and push
+
+---
+
+### 5️⃣ Port Already in Use
+
+**Problem:**
+Spring Boot failed to start due to port conflict.
+
+**Fix:**
+
+* Identified running process
+* Changed backend port configuration
+
+---
+
+### 6️⃣ Kubernetes Deployment Failure (CI/CD)
+
+**Problem:**
+
+```
+failed to download openapi: the server has asked for the client to provide credentials
+```
+
+**Fix:**
+
+* Configured AWS credentials in GitHub Actions
+* Updated kubeconfig dynamically using `aws eks update-kubeconfig`
+
+---
+
+### 7️⃣ YAML Configuration Errors
+
+**Problem:**
+Incorrect `aws-auth` structure caused deployment issues.
+
+**Fix:**
+
+* Corrected YAML indentation
+* Separated `mapRoles` and `mapUsers` properly
+
+
+### 🔥 Key Takeaway
+This project helped me understand real-world DevOps challenges beyond just deployment — especially authentication, networking, and CI/CD debugging in Kubernetes environments.
