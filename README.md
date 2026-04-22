@@ -13,7 +13,7 @@ User → Frontend (React) → Backend (Spring Boot API) → Response
 
 Both services are deployed on AWS EKS using Kubernetes.
 
-(./images/fulstack-backend architecture.png)
+(./images/architecture.png)
 
 
 ## ⚙️ Tech Stack
@@ -42,9 +42,10 @@ Both services are deployed on AWS EKS using Kubernetes.
 
 ## 📸 Screenshots
 ![Frontend]
-(./images/Frontend_ss.png)
+(./images/frontend.png)
 
-![Response](./images/Backend_ss.png)
+![Response]
+(./images/backend.png)
 
 
 
