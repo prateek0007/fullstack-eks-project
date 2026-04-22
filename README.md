@@ -4,14 +4,17 @@ This project demonstrates an end-to-end deployment of a full-stack application u
 
 ## 🔗 Repositories
 
-* 🔹 Frontend (React): https://github.com/<your-username>/react-form-frontend
-* 🔹 Backend (Spring Boot): https://github.com/<your-username>/java-form-backend
+* 🔹 Frontend (React): https://github.com/prateek0007/react-form-frontend
+* 🔹 Backend (Spring Boot): https://github.com/prateek0007/java-form-backend
 
 ## 🏗️ Architecture
 
 User → Frontend (React) → Backend (Spring Boot API) → Response
 
 Both services are deployed on AWS EKS using Kubernetes.
+
+(./images/fulstack-backend architecture.png)
+
 
 ## ⚙️ Tech Stack
 
@@ -38,8 +41,12 @@ Both services are deployed on AWS EKS using Kubernetes.
 4. Response: "Thankyou detail submitted"
 
 ## 📸 Screenshots
+![Frontend]
+(./images/Frontend_ss.png)
 
-(Add screenshots here)
+![Response](./images/Backend_ss.png)
+
+
 
 ## 🧠 Learnings
 
