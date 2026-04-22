@@ -13,7 +13,7 @@ User → Frontend (React) → Backend (Spring Boot API) → Response
 
 Both services are deployed on AWS EKS using Kubernetes.
 
-(./images/architecture.png)
+![Architecture](./images/architecture.png)
 
 
 ## ⚙️ Tech Stack
@@ -41,11 +41,9 @@ Both services are deployed on AWS EKS using Kubernetes.
 4. Response: "Thankyou detail submitted"
 
 ## 📸 Screenshots
-![Frontend]
-(./images/frontend.png)
+![Frontend](./images/frontend.png)
 
-![Response]
-(./images/backend.png)
+![Response](./images/backend.png)
 
 
 
