@@ -41,8 +41,10 @@ Both services are deployed on AWS EKS using Kubernetes.
 4. Response: "Thankyou detail submitted"
 
 ## 📸 Screenshots
+FRONTEDN
 ![Frontend](./images/frontend.png)
 
+RESPONSE
 ![Response](./images/backend.png)
 
 
